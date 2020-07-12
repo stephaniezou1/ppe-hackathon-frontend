@@ -66,7 +66,7 @@ export default function SimpleTabs() {
             </Tabs>
         </AppBar>
         <NavBar value={value} index={0}>
-            Home
+            {/* Home */}
         </NavBar>
         <NavBar value={value} index={1}>
             Meet the Team
