@@ -5,8 +5,14 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 import Box from '@material-ui/core/Box';
 import HomeButtons from '../components/HomeButtons.jsx'
+
+import Icon1 from '../images/icon1.svg';
+import Icon2 from '../images/icon2.svg';
+import Icon3 from '../images/icon3.svg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,7 +26,12 @@ const useStyles = makeStyles((theme) => ({
       padding: '2.5rem'
     },
     subtitle: {
-      color: 'grey'
+      color: 'grey',
+      marginBottom: '1rem'
+    },
+    icon: {
+      display: 'block',
+      margin: 'auto'
     }
   }));
   
@@ -52,13 +63,36 @@ const useStyles = makeStyles((theme) => ({
                 <Typography component="div" style={{ backgroundColor: '#f9f9f9', height: '5rem' }} />
                 <Grid container spacing={3}>
                     <Grid item xs>
-                    <Paper className={classes.paper}>Surgical Masks</Paper>
+                    <Card className={classes.paper}>
+                      <img className={classes.icon} src={Icon3} alt="icon1" />
+                      <CardContent>
+                        <Typography variant="h4" align="center" gutterBottom>
+                          Surgical Masks
+                        </Typography>
+                      </CardContent>
+                    </Card>
                     </Grid>
+
                     <Grid item xs>
-                    <Paper className={classes.paper}>Gloves</Paper>
+                    <Card className={classes.paper}>
+                      <img className={classes.icon} src={Icon1} alt="icon2" />
+                      <CardContent>
+                        <Typography variant="h4" align="center" gutterBottom>
+                          Gloves
+                        </Typography>
+                      </CardContent>
+                    </Card>
                     </Grid>
+
                     <Grid item xs>
-                    <Paper className={classes.paper}>Wipes and Disinfectants</Paper>
+                    <Card className={classes.paper}>
+                      <img className={classes.icon} src={Icon2} alt="icon3" />
+                      <CardContent>
+                      <Typography variant="h4" align="center" gutterBottom>
+                        Hand Sanitizers
+                      </Typography>
+                      </CardContent>
+                    </Card>
                     </Grid>
                 </Grid> 
                 <Typography component="div" style={{ backgroundColor: '#f9f9f9', height: '5rem' }} />
