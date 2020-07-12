@@ -1,39 +1,39 @@
 import React from 'react';
 import './App.css';
-import NavBar from './containers/NavBar'
-import HomeContainer from './containers/HomeContainer' 
+// import NavBar from './containers/NavBar'
+import HomeContainer from './containers/HomeContainer'
 import SchoolContainer from './containers/SchoolContainer'
-import LoginContainer from './containers/LoginContainer' 
-import RegisterContainer from './containers/RegisterContainer.jsx' 
+import LoginContainer from './containers/LoginContainer'
+import RegisterContainer from './containers/RegisterContainer.jsx'
 
 //routing
-import {withRouter} from 'react-router-dom'
-import {Route, Switch} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 //redux
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import { userLogOut, setUserInfo } from './actions/users';
 
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      {/* <NavBar /> */}
       <Switch>
-          <Route exact path="/">
-            <HomeContainer/>
-          </Route>
-          <Route exact path="/schools">
-            <SchoolContainer/>
-          </Route>
-          <Route exact path="/login">
-            <LoginContainer/>
-          </Route>
-          <Route exact path="/register">
-            <RegisterContainer/>
-          </Route>
+        <Route exact path="/">
+          <HomeContainer />
+        </Route>
+        <Route exact path="/schools">
+          <SchoolContainer />
+        </Route>
+        <Route exact path="/login">
+          <LoginContainer />
+        </Route>
+        <Route exact path="/register">
+          <RegisterContainer />
+        </Route>
       </Switch>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }
@@ -47,7 +47,7 @@ let mapDispatchToProps = {
 
 let mapStateToProps = (globalState) => {
   return {
-    token: globalState.userInformation.token
+    // token: globalState.userInformation.token
   }
 }
 
