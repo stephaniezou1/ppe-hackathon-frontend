@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-// import NavBar from './containers/NavBar'
+import NavBar from './components/NavBar'
 import HomeContainer from './containers/HomeContainer'
 import SchoolContainer from './containers/SchoolContainer'
 import LoginContainer from './containers/LoginContainer'
@@ -18,7 +18,7 @@ import { userLogOut, setUserInfo } from './actions/users';
 function App() {
   return (
     <div className="App">
-      {/* <NavBar /> */}
+      <NavBar />
       <Switch>
         <Route exact path="/">
           <HomeContainer />
@@ -33,7 +33,6 @@ function App() {
           <RegisterContainer />
         </Route>
       </Switch>
-      {/* <Footer/> */}
     </div>
   );
 }
