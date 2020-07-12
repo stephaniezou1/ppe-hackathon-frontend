@@ -1,6 +1,5 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
@@ -21,10 +20,14 @@ const useStyles = makeStyles((theme) => ({
         <div className={classes.root}>
           <Grid container spacing={2}>
             <Grid item xs={6}>
-              <Paper className={classes.paper}>xs=6</Paper>
+              {/* <Paper className={classes.paper}> */}
+                  <h1> Donate your PPE to Schools</h1>
+                  <p> Schools face new challenges because of COVID-19. <br/>
+                  They need PPE to protect their students and faculty.</p>
+              {/* </Paper> */}
             </Grid>
             <Grid item xs={6}>
-              <Paper className={classes.paper}>xs=6</Paper>
+              <img className="home-image" src={require("../images/home_1.jpg")}/>
             </Grid>
           </Grid>
         </div>
