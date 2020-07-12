@@ -4,7 +4,6 @@ const NavBar = () => {
     
     return (
         <div>
-            Hello World I'm NavBar
         </div>
     )
 }
