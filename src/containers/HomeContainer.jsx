@@ -5,6 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
+import Box from '@material-ui/core/Box';
 import HomeButtons from '../components/HomeButtons.jsx'
 
 const useStyles = makeStyles((theme) => ({
@@ -13,9 +14,14 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
       padding: theme.spacing(2),
-      textAlign: 'center',
       color: theme.palette.text.secondary,
     },
+    heroArea: {
+      padding: '2.5rem'
+    },
+    subtitle: {
+      color: 'grey'
+    }
   }));
   
   export default function HomeContainer() {
@@ -26,10 +32,16 @@ const useStyles = makeStyles((theme) => ({
           <Grid container spacing={2}>
             <Grid item xs={6}>
               {/* <Paper className={classes.paper}> */}
-                  <h1> Donate your PPE to Schools</h1>
-                  <p> Schools face new challenges because of COVID-19. <br/>
-                  They need PPE to protect their students and faculty.</p>
-                  <HomeButtons/>
+              <Box className={classes.heroArea}>
+                <Typography variant="h3" gutterBottom>
+                  Donate your PPE to Schools
+                </Typography>
+                <Typography className={classes.subtitle} variant="subtitle1" gutterBottom>
+                  Schools face new challenges because of COVID-19.
+                  They need PPE to protect their students and faculty.
+                </Typography>
+                 <HomeButtons/>
+              </Box>
               {/* </Paper> */}
             </Grid>
             <Grid item xs={6}>

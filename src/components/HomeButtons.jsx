@@ -17,15 +17,16 @@ export default function HomeButtons() {
     const classes = useStyles();
   
     return (
-      <div className={classes.root} style={{justifyContent: 'center'}}>
+      <div className={classes.root}>
         <ButtonGroup
           color="primary"
           aria-label="vertical outlined primary button group"
+          size="large"
         >
             <Button component={Link} to="/register" >Get PPE</Button>
         </ButtonGroup>
         <ButtonGroup
-          color="primary"
+          color="secondary"
           aria-label="vertical outlined primary button group"
         >
           <Button component={Link} to="/schools">Give PPE</Button>
