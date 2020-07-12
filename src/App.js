@@ -39,15 +39,5 @@ function App() {
 
 let RoutedApp = withRouter(App)
 
-let mapDispatchToProps = {
-  setUserInfo: setUserInfo,
-  userLogOut: userLogOut
-}
 
-let mapStateToProps = (globalState) => {
-  return {
-    // token: globalState.userInformation.token
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(RoutedApp)
+export default RoutedApp;
