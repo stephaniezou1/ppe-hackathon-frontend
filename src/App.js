@@ -1,5 +1,10 @@
 import React from 'react';
 import './App.css';
+import NavBar from './containers/NavBar'
+import HomeContainer from './containers/HomeContainer' 
+import SchoolContainer from './containers/SchoolContainer'
+import LoginContainer from './containers/LoginContainer' 
+import RegisterContainer from './containers/RegisterContainer.jsx' 
 
 //routing
 import {withRouter} from 'react-router-dom'
