@@ -5,3 +5,8 @@
 .home-image {
   width: 100%;
 }
+
+.MuiButtonGroup-grouped {
+  min-width: 40px;
+  text-align: center !important;
+}

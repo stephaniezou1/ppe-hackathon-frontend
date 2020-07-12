@@ -5,6 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
+import HomeButtons from '../components/HomeButtons.jsx'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
                   <h1> Donate your PPE to Schools</h1>
                   <p> Schools face new challenges because of COVID-19. <br/>
                   They need PPE to protect their students and faculty.</p>
+                  <HomeButtons/>
               {/* </Paper> */}
             </Grid>
             <Grid item xs={6}>
