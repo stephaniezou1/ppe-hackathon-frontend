@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -13,6 +14,16 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 
 export class SchoolContainer extends Component {
+    state = {
+        schools: []
+    };
+
+    async componentDidMount(){
+        const res = await axios.get("https://ppeserver.herokuapp.com/api/school");
+
+        this.setState({ schools: res.data.data});
+    }
+
     render() {
         return (
             <Container>
@@ -87,83 +98,32 @@ export class SchoolContainer extends Component {
                     </Grid>
                     <Grid item xs={9}>
                         <Grid container spacing={3}>
-                            <Grid item xs={4}>
-                                <Card>
-                                    <CardActionArea>
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                Roosevelt High School
-                                            </Typography>
-                                        <Typography variant="body2" color="textSecondary" component="p">
-                                            In need of 2000 masks
-                                        </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            See More
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                            <Grid item xs={4}>
-                                <Card>
-                                    <CardActionArea>
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                Roosevelt High School
-                                            </Typography>
-                                        <Typography variant="body2" color="textSecondary" component="p">
-                                            In need of 2000 masks
-                                        </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            See More
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                            <Grid item xs={4}>
-                                <Card>
-                                    <CardActionArea>
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                Roosevelt High School
-                                            </Typography>
-                                        <Typography variant="body2" color="textSecondary" component="p">
-                                            In need of 2000 masks
-                                        </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            See More
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                            <Grid item xs={4}>
-                                <Card>
-                                    <CardActionArea>
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                Roosevelt High School
-                                            </Typography>
-                                        <Typography variant="body2" color="textSecondary" component="p">
-                                            In need of 2000 masks
-                                        </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            See More
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                        </Grid>
+                            { this.state.schools.length > 0 ? (
+                                this.state.schools.map(school => {
+                                    return(
+                                        <Grid item xs={4} key={school._id}>
+                                            <Card >
+                                                <CardActionArea>
+                                                    <CardContent>
+                                                        <Typography gutterBottom variant="h5" component="h2">
+                                                            {school.name}
+                                                        </Typography>
+                                                    <Typography variant="body2" color="textSecondary" component="p">
+                                                        {school.description}
+                                                    </Typography>
+                                                    </CardContent>
+                                                </CardActionArea>
+                                                <CardActions>
+                                                    <Button size="small" color="primary">
+                                                        See More
+                                                    </Button>
+                                                </CardActions>
+                                            </Card>
+                                        </Grid>
+                                    )
+                                })
+                            ) : <p>Loading</p>}
+                        </Grid>  
                     </Grid>
                 </Grid>
             </Container>
