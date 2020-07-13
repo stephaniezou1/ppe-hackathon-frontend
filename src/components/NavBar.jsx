@@ -65,6 +65,9 @@ export default function SimpleTabs() {
         <NavBar value={value} index={0}>
             {/* Home */}
         </NavBar>
+        <NavBar value={value} index={1}>
+            {/* Schools */}
+        </NavBar>
         <NavBar value={value} index={2}>
             <About />
         </NavBar>

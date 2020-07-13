@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -114,7 +115,7 @@ export class SchoolContainer extends Component {
                                                     </CardContent>
                                                 </CardActionArea>
                                                 <CardActions>
-                                                    <Button size="small" color="primary">
+                                                    <Button component={Link} to={`/profile/${school._id}`} size="small" color="primary">
                                                         See More
                                                     </Button>
                                                 </CardActions>
