@@ -5,6 +5,7 @@ import HomeContainer from './containers/HomeContainer'
 import SchoolContainer from './containers/SchoolContainer'
 import LoginContainer from './containers/LoginContainer'
 import RegisterContainer from './containers/RegisterContainer.jsx'
+import ProfileContainer from './containers/ProfileContainer.jsx'
 
 //routing
 import { withRouter } from 'react-router-dom'
@@ -31,6 +32,8 @@ function App() {
         </Route>
         <Route exact path="/register">
           <RegisterContainer />
+        </Route>
+        <Route path={"/profile/:id"} component={ProfileContainer}>
         </Route>
       </Switch>
     </div>
