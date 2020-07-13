@@ -57,6 +57,7 @@ export default function SimpleTabs() {
         <AppBar position="static" style={{ background: '#3f50b5', boxShadow: 'none'}}>
             <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
             <Tab label="Home" component={Link} to="/"/>
+            <Tab label="Schools" component={Link} to="/schools" />
             <Tab label="Meet the Team" component={Link} to="/about" />
             <Tab label="Contact Us" component={Link} to="/contact" />
             </Tabs>
@@ -64,10 +65,10 @@ export default function SimpleTabs() {
         <NavBar value={value} index={0}>
             {/* Home */}
         </NavBar>
-        <NavBar value={value} index={1}>
+        <NavBar value={value} index={2}>
             <About />
         </NavBar>
-        <NavBar value={value} index={2}>
+        <NavBar value={value} index={3}>
             <ContactUs />
         </NavBar>
         </div>
