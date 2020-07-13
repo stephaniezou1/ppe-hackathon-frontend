@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { useParams } from "react-router";
 import axios from 'axios';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -7,16 +6,17 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
-export class ProfileContainer extends Component {
-    constructor(props){
-        super(props);
+class ProfileContainer extends Component {
+    constructor(){
+        super();
         this.state = {
             school: {}
         };
     }
 
     async componentDidMount(){
-        const res = await axios.get("https://ppeserver.herokuapp.com/api/school/5f0bd11c735b4431aedf3728");
+        const { id } = this.props.match.params;
+        const res = await axios.get("https://ppeserver.herokuapp.com/api/school/" + id);
 
         this.setState({ school: res.data.data});
     }

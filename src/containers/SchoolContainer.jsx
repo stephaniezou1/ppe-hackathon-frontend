@@ -14,7 +14,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 
-export class SchoolContainer extends Component {
+class SchoolContainer extends Component {
     state = {
         schools: []
     };

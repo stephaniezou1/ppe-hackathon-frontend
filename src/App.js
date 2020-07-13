@@ -8,7 +8,7 @@ import RegisterContainer from './containers/RegisterContainer.jsx'
 import ProfileContainer from './containers/ProfileContainer.jsx'
 
 //routing
-import { BrowserRouter, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { Route, Switch } from 'react-router-dom'
 
 //redux
@@ -18,7 +18,7 @@ import { userLogOut, setUserInfo } from './actions/users';
 
 function App() {
   return (
-    <BrowserRouter className="App">
+    <div className="App">
       <NavBar />
       <Switch>
         <Route exact path="/">
@@ -33,11 +33,10 @@ function App() {
         <Route exact path="/register">
           <RegisterContainer />
         </Route>
-        <Route exact path="/profile/:id">
-          <ProfileContainer />
+        <Route path={"/profile/:id"} component={ProfileContainer}>
         </Route>
       </Switch>
-    </BrowserRouter>
+    </div>
   );
 }
 
