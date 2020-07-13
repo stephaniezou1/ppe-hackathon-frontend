@@ -54,7 +54,7 @@ export default function SimpleTabs() {
 
   return (
         <div className={classes.root}>
-        <AppBar position="static" style={{ background: '#3f50b5', boxShadow: 'none'}}>
+        <AppBar position="static" className="primary-color" style={{ background: '#3f50b5', boxShadow: 'none'}}>
             <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
             <Tab label="Home" component={Link} to="/"/>
             <Tab label="Schools" component={Link} to="/schools" />

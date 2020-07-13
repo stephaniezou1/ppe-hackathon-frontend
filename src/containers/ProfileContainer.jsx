@@ -32,7 +32,7 @@ class ProfileContainer extends Component {
                     </Grid>
                     <Grid item xs={3}>
                         <Typography gutterBottom variant="h3" component="h2" align="right">
-                            K12
+                            {school.gradeLevel}
                         </Typography>
                     </Grid>
                     <Grid item xs={6}>
@@ -42,10 +42,10 @@ class ProfileContainer extends Component {
                                     PPE Needs
                                 </Typography>
                                 <Typography variant="body1" color="textSecondary" component="p">
-                                    Item1 
+                                    Masks: 1000 
                                 </Typography>
                                 <Typography variant="body1" color="textSecondary" component="p">
-                                    Item1 
+                                    Hand Sanitizers: 1000
                                 </Typography>
                             </CardContent>
                         </Card>
@@ -57,13 +57,13 @@ class ProfileContainer extends Component {
                                     Administrator Contact Info
                                 </Typography>
                                 <Typography variant="body1" color="textSecondary" component="p">
-                                    Name:  
+                                    Name:  Joe Doe
                                 </Typography>
                                 <Typography variant="body1" color="textSecondary" component="p">
-                                    Email:  
+                                    Email:  joedoe@mail.com
                                 </Typography>
                                 <Typography variant="body1" color="textSecondary" component="p">
-                                Telephone:  
+                                Telephone: 111-111-1111
                                 </Typography>
                             </CardContent>
                         </Card>

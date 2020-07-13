@@ -44,7 +44,7 @@ class SchoolContainer extends Component {
                                 margin="normal"
                                 variant="outlined"
                             />
-                            <Button variant="contained" color="primary" size="large">
+                            <Button className="primary-color" variant="contained" color="primary" size="large">
                                 Send
                             </Button>
                         </Box>
