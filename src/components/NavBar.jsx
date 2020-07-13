@@ -8,6 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { Link } from 'react-router-dom'
 
+import ContactUs from './ContactUs';
+
 function NavBar(props) {
   const { children, value, index, ...other } = props;
 
@@ -65,7 +67,7 @@ export default function SimpleTabs() {
             Meet the Team
         </NavBar>
         <NavBar value={value} index={2}>
-            Contact Us
+            <ContactUs />
         </NavBar>
         </div>
   );
